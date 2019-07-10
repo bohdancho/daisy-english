@@ -1,0 +1,84 @@
+.advantages {
+    padding: 30px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    &__item {
+        padding-right: 40px;
+        width: 33%;
+        position: relative;
+        &:not(:last-child) {
+            &:after {
+                content: '';
+                width: 6px;
+                height: 107px;
+                border-radius: 3px;
+                background-color: #d4d4d4;
+                display: block;
+                position: absolute;
+                right: 15px;
+                bottom: 3px;
+            }
+        }
+    }
+    &__text {
+        color: #808080;
+        font-size: 18px;
+        line-height: 23px
+    }
+    &__img {
+        height: 63px;
+    }
+    &__title {
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .advantages {
+        padding: 20px 0;
+        &__item {
+            padding-right: 20px;
+            &:not(:last-child) {
+                &:after {
+                    width: 4px;
+                    right: 10px;
+                }
+            }
+        }
+        &__img {
+            margin-bottom: 3px;
+            height: 53px;
+        }
+        &__title {
+            margin-bottom: 3px;
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .advantages {
+        &__container {
+            flex-direction: column;
+        }
+        &__item {
+            margin-bottom: 5px;
+            width: 100%;
+            text-align: center;
+            &:not(:last-child) {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

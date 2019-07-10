@@ -1,0 +1,55 @@
+.footer {
+    padding: 20px 0 50px;
+    &__text {
+        margin-bottom: 25px;
+        color: #e8e8e8;
+        font-weight: 300;
+        text-align: center;
+    }
+    &__bold {
+        color: #ffffff;
+        font-weight: 900;
+    }
+    &__light {
+        color: #ffffff;
+    }
+    &__icons {
+        display: flex;
+        justify-content: center;
+    }
+    &__icon {
+        width: 39px;
+    }
+    &__link {
+        display: block;
+        &:not(:last-child) {
+            margin-right: 31px;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .footer {
+        padding: 20px 0 10px;
+        &__text {
+            margin-bottom: 15px;
+        }
+        &__icon {
+            width: 25px;
+        }
+        &__link {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .footer {
+        padding: 0 0 10px;
+        &__text {
+            padding: 0 10px;
+        }
+    }
+}

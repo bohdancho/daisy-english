@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Daisy English</title>
+
+	<!-- Main stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+	<header class="header" id="header">
+		<div class="container header__container">
+			<button class="nav-button js-nav-button"><span class="nav-button__line"></span></button>
+			<a href="#" class="header__logo logo">
+				<img src="img/interface/logo.png" alt="logo" class="logo__img">
+			</a>
+			<nav class="nav js-nav">
+				<a href="#header" class="nav__item">
+					Главная
+				</a>
+				<a href="#goal" class="nav__item">
+					Курсы
+				</a>
+				<a href="#discount" class="nav__item">
+					Стоимость
+				</a>
+				<a href="#reviews" class="nav__item">
+					Отзывы
+				</a>
+				<a href="#register" class="nav__item">
+					Контакты
+				</a>
+			</nav>
+			<a href="#" class="header__phone">
+				+7 (939) 701-08-91
+			</a>
+		</div>
+	</header>
+	<main>
+		<section class="main" id="main">
+			<div class="container main__container">
+				<div class="main__left">
+					<h1 class="main__title">
+						Учите английский по скайпу
+					</h1>
+					<p class="main__text">
+						Персональные занятия с сильными
+						преподавателями <span class="main__bold">от 650 рублей</span>
+					</p>
+					<button class="btn-blue main__btn main__btn_desktop js-open-modal">Начать учиться</button>
+				</div>
+				<img src="img/main/girl.png" alt="girl" class="main__right">
+				<button class="btn-blue main__btn_mobile js-open-modal">Начать учиться</b>
+			</div>
+		</section>
+		<section class="advantages" id="advantages">
+			<div class="container advantages__container">
+				<div class="advantages__item">
+					<img src="img/advantages/human.png" alt="human" class="advantages__img">
+					<h2 class="advantages__title">
+						Сильные преподаватели
+					</h2>
+					<p class="advantages__text">
+						Отбираем только тех,кто умеет 
+						передавать знания и работает 
+						на результат своих учеников
+					</p>
+				</div>
+				<div class="advantages__item">
+					<img src="img/advantages/papers.png" alt="papers" class="advantages__img">
+					<h2 class="advantages__title">
+						Персональная программа
+					</h2>
+					<p class="advantages__text">
+						Подстраиваемся под ваши
+						потребности и адаптируем
+						учебные материалы под вас
+					</p>
+				</div>
+				<div class="advantages__item">
+					<img src="img/advantages/money.png" alt="money" class="advantages__img">
+					<h2 class="advantages__title">
+						Разумные цены и скидки
+					</h2>
+					<p class="advantages__text">
+						Устанавливаем адекватную цену
+						за качественную работу.
+						Предлагаем оплату от 2 уроков
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="goal" id="goal">
+			<div class="container">
+				<h2 class="goal__title">
+					Какова ваша цель?
+				</h2>
+				<div class="goal__buttons">
+					<button class="goal__btn tab-btn active" onclick="tab(event, 'simple')">
+						Общий курс
+					</button>
+					<button class="goal__btn tab-btn" onclick="tab(event, 'ege')">
+						Подготовка к ЕГЭ
+					</button>
+					<button class="goal__btn tab-btn" onclick="tab(event, 'oge')">
+						Подготовка к ОГЭ
+					</button>
+				</div>
+				<div class="goal__item tab__item" id="simple" style="display: flex;">
+					<img src="img/goal/img1.png" alt="girl" class="tab__img">
+					<div class="tab__right">
+						<h3 class="tab__title">
+							Общий разговорный курс
+						</h3>
+						<div class="tab__list">
+							Повышение уровня знаний
+						</div>
+						<div class="tab__list">
+							70% урока - разговорная практика
+						</div>
+						<div class="tab__list tab__list_last">
+							Преодоление языкового и слухового барьеров
+						</div>
+						<div class="tab__info">
+							<button class="btn-blue tab__btn js-open-modal">Начать учиться</button>
+							<div class="tab__price">
+								<div class="tab__number">
+									650 р
+								</div>
+								<div class="tab__descr">
+									за занятие
+								</div>
+							</div>
+						</div>
+						<div class="tab__important">
+							<div class="tab__exclamation">
+								!
+							</div>
+							<div class="tab__howtopay">
+								Оплата занятий производится от месяца,
+								скидка при оплате от 2-ух месяцев
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goal__item tab__item" id="ege">
+					<img src="img/goal/img2.png" alt="man" class="tab__img">
+					<div class="tab__right">
+						<h3 class="tab__title">
+							Подготовка к ЕГЭ по английскому
+						</h3>
+						<div class="tab__list">
+							Максимальный балл для ученика
+						</div>
+						<div class="tab__list">
+							Задания по всей структуре экзамена
+						</div>
+						<div class="tab__list tab__list_last">
+							Имитация экзамена или его частей
+						</div>
+						<div class="tab__info">
+							<button class="btn-blue tab__btn js-open-modal">Начать учиться</button>
+							<div class="tab__price">
+								<div class="tab__number">
+									650 р
+								</div>
+								<div class="tab__descr">
+									за занятие
+								</div>
+							</div>
+						</div>
+						<div class="tab__important">
+							<div class="tab__exclamation">
+								!
+							</div>
+							<div class="tab__howtopay">
+								Оплата занятий производится от месяца,
+								скидка при оплате от 2-ух месяцев
+							</div>
+						</div>
+					</div>
+				</div>			
+				<div class="goal__item tab__item" id="oge">
+					<img src="img/goal/img3.png" alt="laptop" class="tab__img">
+					<div class="tab__right">
+						<h3 class="tab__title">
+							Подготовка к ОГЭ по английскому
+						</h3>
+						<div class="tab__list">
+							Максимальный балл для ученика
+						</div>
+						<div class="tab__list">
+							Задания по всей структуре экзамена
+						</div>
+						<div class="tab__list tab__list_last">
+							Имитация экзамена или его частей
+						</div>
+						<div class="tab__info">
+							<button class="btn-blue tab__btn js-open-modal">Начать учиться</button>
+							<div class="tab__price">
+								<div class="tab__number">850 р</div>
+								<div class="tab__descr">за занятие</div>
+							</div>
+						</div>
+						<div class="tab__important">
+							<div class="tab__exclamation">
+								!
+							</div>
+							<div class="tab__howtopay">
+								Оплата занятий производится от месяца,
+								скидка при оплате от 2-ух месяцев
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="discount" id="discount">
+			<div class="container">
+				<h2 class="discount__title">
+					Вводный урок - бесплатно!
+				</h2>
+				<p class="discount__text">
+					Познакомьтесь со своим будущим преподавателем
+					и узнайте свой уровень английского на пробном уроке,
+					а так же узнайте как <span class="discount__bold">получить скидку в 30%</span>
+				</p>
+				<button class="discount__button js-open-modal">
+					Попробовать
+				</b>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container about__container">
+				<div class="about__left">
+					<h2 class="about__title">
+						О нашей школе
+					</h2>
+					<p class="about__text">
+						Наша школа существует с июля 2011 года. За это время мы помогли достичь цели <span class="about__bold">14000</span> ученикам. Обучение английскому языку по Скайпу в школе
+						<span class="about__bold">«DaisyEnnglish»</span> — это живое общение с учителем. 
+					</p>
+					<p class="about__text">
+						Мы знаем, что для многих студентов решающим фактором при выборе школы становится личность учителя. Поэтому наш приоритет — <span class="about__bold">отбор 
+						сильных преподавателей.</span>
+					</p>
+					<p class="about__text">
+						Наши преподаватели и студенты раскиданы 
+						не только по всей России, но и по всему свету. Английский язык по Скайпу — удобный формат, который позволяет им дистанционно встречаться несколько раз в неделю.
+					</p>
+					<p class="about__text">
+						<span class="about__bold">Присоединяйтесь!</span>
+					</p>
+				</div>
+				<div class="about__right">
+					<img src="img/about/map.png" alt="map" class="about__img">
+					<div class="about__info">
+						<div class="about__item">
+							<div class="about__number">
+								8&nbsp;лет
+							</div>
+							<div class="about__descr">
+								работы
+							</div>
+						</div>
+						<div class="about__item">
+							<div class="about__number">
+								2&nbsp;700
+							</div>
+							<div class="about__descr">
+								постоянных студентов
+							</div>
+						</div>
+						<div class="about__item">
+							<div class="about__number">
+								14&nbsp;000
+							</div>
+							<div class="about__descr">
+								выпускников
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="reviews" id="reviews">
+			<div class="container">
+				<h2 class="reviews__title">
+					Отзывы наших студентов
+				</h2>
+	
+				<div class="slider">
+					<div class="slider__container">
+						<div class="slider__item">
+							<div class="slider__item__wrap">
+								<div class="slider__close hidden">&times;</div>
+								<div class="slider__top">
+									<img src="img/reviews/photo.png" alt="avatar" class="slider__img">
+									<div class="slider__right">
+										<div class="slider__name">
+											Михаил Коршунов <a href="#" class="slider__vk-link"><img class="slider__vk-img" src="img/interface/vk.png" alt="vk icon"></a>
+										</div>
+										<div class="slider__descr">
+											Программист, г. Челябинск
+										</div>
+									</div>
+								</div>
+		
+								<h3 class="slider__title">
+									Прогресс с первой недели
+								</h3>
+								<p class="slider__text slider__smalltext">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+								</p>
+								<p class="slider__text slider__fulltext hidden">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+									правильнее. Ну и помимо профессиональных качеств — душевный человек, с 
+									которым просто приятно поговорить, в том числе и на английском языке :-)
+								</p>
+		
+								<div class="slider__readfull">
+									Читать полностью <img class="slider__arrowsm" src="img/reviews/arrow-sm.png" alt="arrow">
+								</div>
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item__wrap">
+								<div class="slider__close hidden">&times;</div>
+								<div class="slider__top">
+									<img src="img/reviews/photo.png" alt="avatar" class="slider__img">
+									<div class="slider__right">
+										<div class="slider__name">
+											Михаил Коршунов <a href="#" class="slider__vk-link"><img class="slider__vk-img" src="img/interface/vk.png" alt="vk icon"></a>
+										</div>
+										<div class="slider__descr">
+											Программист, г. Челябинск
+										</div>
+									</div>
+								</div>
+		
+								<h3 class="slider__title">
+									Прогресс с первой недели
+								</h3>
+								<p class="slider__text slider__smalltext">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+								</p>
+								<p class="slider__text slider__fulltext hidden">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+									правильнее. Ну и помимо профессиональных качеств — душевный человек, с 
+									которым просто приятно поговорить, в том числе и на английском языке :-)
+								</p>
+		
+								<div class="slider__readfull">
+									Читать полностью <img class="slider__arrowsm" src="img/reviews/arrow-sm.png" alt="arrow">
+								</div>
+							</div>
+						</div>
+						
+						<div class="slider__item">
+							<div class="slider__item__wrap">
+								<div class="slider__close hidden">&times;</div>
+								<div class="slider__top">
+									<img src="img/reviews/photo.png" alt="avatar" class="slider__img">
+									<div class="slider__right">
+										<div class="slider__name">
+											Михаил Коршунов <a href="#" class="slider__vk-link"><img class="slider__vk-img" src="img/interface/vk.png" alt="vk icon"></a>
+										</div>
+										<div class="slider__descr">
+											Программист, г. Челябинск
+										</div>
+									</div>
+								</div>
+		
+								<h3 class="slider__title">
+									Прогресс с первой недели
+								</h3>
+								<p class="slider__text slider__smalltext">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+								</p>
+								<p class="slider__text slider__fulltext hidden">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+									правильнее. Ну и помимо профессиональных качеств — душевный человек, с 
+									которым просто приятно поговорить, в том числе и на английском языке :-)
+								</p>
+		
+								<div class="slider__readfull">
+									Читать полностью <img class="slider__arrowsm" src="img/reviews/arrow-sm.png" alt="arrow">
+								</div>
+							</div>
+						</div>
+
+						<div class="slider__item">
+							<div class="slider__item__wrap">
+								<div class="slider__close hidden">&times;</div>
+								<div class="slider__top">
+									<img src="img/reviews/photo.png" alt="avatar" class="slider__img">
+									<div class="slider__right">
+										<div class="slider__name">
+											Михаил Коршунов <a href="#" class="slider__vk-link"><img class="slider__vk-img" src="img/interface/vk.png" alt="vk icon"></a>
+										</div>
+										<div class="slider__descr">
+											Программист, г. Челябинск
+										</div>
+									</div>
+								</div>
+		
+								<h3 class="slider__title">
+									Прогресс с первой недели
+								</h3>
+								<p class="slider__text slider__smalltext">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+								</p>
+								<p class="slider__text slider__fulltext hidden">
+									Хотелось бы поблагодарить моего преподавателя Татьяну. 
+									Прогресс был виден с первой недели. Она помогла мне выявить все мои 
+									слабые места и в дополнение к основной программе сделать упор на них. 
+									Убрали множество грамматических ошибок, и моя речь стала звучать в разы 
+									правильнее. Ну и помимо профессиональных качеств — душевный человек, с 
+									которым просто приятно поговорить, в том числе и на английском языке :-)
+								</p>
+		
+								<div class="slider__readfull">
+									Читать полностью <img class="slider__arrowsm" src="img/reviews/arrow-sm.png" alt="arrow">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider__nav">
+					<div class="slider__prev">
+						<img src="img/reviews/arrow-right.svg" alt="arrow to right" class="slider__prev-arrow">
+					</div>
+					<div class="slider__count">1 из 4</div>
+					<div class="slider__next">
+						<img src="img/reviews/arrow-right.svg" alt="arrow to right" class="slider__next-arrow">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="footer-bg">
+		<section class="register" id="register">
+			<div class="container register__container">
+				<h2 class="register__title">
+					Запишись на бесплатный вводный урок
+				</h2>
+				<p class="register__text">
+					Познакомьтесь со своим будущим преподавателеми узнайте свой уровень 
+					английского на пробном уроке, а так же узнайте 
+					как <br> <span class="register__bold">получить скидку в 30%</span>
+				</p>
+				<form class="register__form js-register__form" action="#">
+					<div class="register__inputs">
+						<div class="register__wrap">
+							<input type="text" placeholder="Имя" name="name" class="register__input">
+						</div>
+						<div class="register__wrap">
+							<input type="tel" placeholder="Телефон" name="tel" class="register__input js-register__input_tel">
+						</div>
+					</div>
+					<input type="submit" value="Записаться" class="register__button">
+				</form>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="footer__text">
+				2011 - 2019 <span class="footer__bold">Daisy</span><span class="footer__light">English</span> - онлайн школа английского языка
+			</div>
+			<div class="footer__icons">
+				<a href="#" class="footer__link"><img src="img/footer/facebook-round.png" alt="facebook icon" class="footer__icon"></a>
+				<a href="#" class="footer__link"><img src="img/footer/instagram-round.png" alt="instagram icon" class="footer__icon"></a>
+				<a href="#" class="footer__link"><img src="img/footer/vk-round.png" alt="vk icon" class="footer__icon"></a>
+			</div>
+		</footer>
+	</div>
+	<div class="modal hidden">
+		<div class="modal__wrap">
+			<div class="modal__close">&times;</div>
+			<div class="modal__text">
+				<div class="modal__title">
+					Заполните форму заявки <br>
+					<span class="modal__light">и получите вводный урок бесплатно</span>
+				</div>
+				<form class="modal__form js-modal__form" action="#">
+					<div class="modal__input-wrap">
+						<input class="register__input modal__input" type="text" name="name" placeholder="Имя">
+					</div>
+					<div class="modal__input-wrap">
+						<input class="register__input modal__input js-modal__input_tel" type="tel" name="tel" placeholder="Телефон">
+					</div>
+					<input class="register__button modal__button" type="submit" value="Отправить">
+				</form>
+			</div>
+			<img src="img/modal/guys.png" alt="guys" class="modal__img">
+		</div>
+	</div>
+	<div class="mobile-nav">
+		<div class="container mobile-nav__container">
+			<a href="#goal" class="mobile-nav__item">
+				<img src="img/mobile-nav/img1.png" alt="laptop" class="mobile-nav__image">
+				<div class="mobile-nav__text">Курсы</div>
+			</a>
+			<a href="#discount" class="mobile-nav__item">
+				<img src="img/mobile-nav/img2.png" alt="money" class="mobile-nav__image">
+				<div class="mobile-nav__text">Цены</div>
+			</a>
+			<a href="#reviews" class="mobile-nav__item">
+				<img src="img/mobile-nav/img3.png" alt="card" class="mobile-nav__image">
+				<div class="mobile-nav__text">Отзывы</div>
+			</a>
+			<a href="#register" class="mobile-nav__item">
+				<img src="img/mobile-nav/img4.png" alt="" class="mobile-nav__image">
+				<div class="mobile-nav__text">Контакты</div>
+			</a>
+		</div>
+	</div>
+	<div class="darken-bg"></div>
+	<script src="js/script.js"></script>
+</body>
+</html>

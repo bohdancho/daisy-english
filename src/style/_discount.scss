@@ -1,0 +1,71 @@
+.discount {
+    padding: 25px;
+    color: #ffffff;
+    text-align: center;
+    background-image: linear-gradient(to top, #0067b1 0%, #009efe 100%);
+    &__title {
+        margin-bottom: 10px;
+        font-size: 40px;
+        font-family: 'Code-Pro', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin: 0 auto 26px;
+        width: 50%;
+        line-height: 28px;
+    }
+    &__bold {
+        font-weight: 700;
+    }
+    &__button {
+        padding: 16px 48px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.2s ease;
+        color: #0068b2;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        border: none;
+        border-radius: 32px;
+        background-color: #ffffff;
+        &:hover {
+            box-shadow: 0 10px 15px rgba(39, 39, 39, 0.3);
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .discount {
+        padding: 15px;
+        &__title {
+            font-size: 30px;
+        }
+        &__text {
+            margin-bottom: 16px;
+            line-height: 20px;
+        }
+        &__button {
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .discount {
+        &__title {
+            font-size: 27px;
+        }
+        &__text {
+            margin: 0 0 10px;
+            width: 100%;
+            line-height: 17px;
+        }
+        &__button {
+            padding: 10px 25px;
+            font-size: 15px;
+        }
+    }
+}

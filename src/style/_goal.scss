@@ -1,0 +1,201 @@
+.goal {
+    padding: 30px 0;
+    &__title {
+        margin-bottom: 28px;
+        font-family: 'Code-Pro', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &__buttons {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.tab {
+    &-btn {
+        padding: 10px 63px;
+        border: none;
+        background: none;
+        font-weight: 400;
+        font-size: 20px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        &.active {
+            border-radius: 24px;
+            border: 2px solid #0069b3;
+            cursor: auto;
+        }
+    }
+    &__item {
+        margin-left: -60px;
+        padding-right: 103px;
+        display: flex;
+        align-items: center;
+        display: none;
+    }
+    &__img {
+        margin-right: 30px;
+    }
+    &__title {
+        margin-bottom: 22px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &__list {
+        padding-left: 40px;
+        margin-bottom: 10px;
+        position: relative;
+        line-height: 29px;
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #0069b3 url(../img/interface/check.png) center center no-repeat;
+            background-size: 12px 12px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &_last {
+            margin-bottom: 30px;
+        }
+    }
+    &__info {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        margin-right: 27px;
+    }
+    &__number {
+        color: #0069b3;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &__important {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__exclamation {
+        margin-right: 24px;
+        color: #006ab7;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 44px;
+        min-width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 2px solid #006cba;
+    }
+    &__howtopay {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .goal {
+        padding: 20px 0 0;
+        &__title {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+    }   
+    .tab {
+        &-btn {
+            padding: 8px 30px;
+            font-size: 15px;
+        }
+        &__img {
+            margin: 0;
+            width: 300px;
+        }
+        &__item {
+            padding: 0;
+        }
+        &__title {
+            margin-bottom: 10яpx;
+            font-size: 20px;
+        }
+        &__list {
+            margin: 0;
+            padding-left: 25px;
+            &:before {
+               width: 18px;
+               height: 18px;
+               background-size: 7px 7px;
+            } 
+            &_last {
+               margin-bottom: 15px;
+            }
+        }
+        &__btn {
+            margin-right: 21px;
+        }
+        &__number {
+            font-size: 27px;
+        }
+        &__exclamation {
+            line-height: 32px;
+            min-width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+        &__howtopay {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .goal {
+        padding: 0 0 10px;
+        &__buttons {
+            margin-bottom: 5px;
+        }        
+    }
+    .tab {
+        &-btn {
+            font-size: 14px;
+            padding: 3px 15px;
+        }
+        &__item {
+            margin: 0;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+        &__img {
+            width: 60%;
+            align-items: flex-start;
+        }
+        &__right {
+            width: 100%;
+        }
+        &__title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        &__list {
+            margin-bottom: 4px;
+            line-height: 18px;
+            &_last {
+                margin-bottom: 10px;
+            }
+        }
+        &__info {
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+        &__howtopay {
+            font-size: 13px;
+        }
+    }
+}

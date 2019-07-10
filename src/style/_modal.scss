@@ -1,0 +1,154 @@
+.modal {
+    padding: 31px 81px 0;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 974px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #0068b3 0%, #009dff 100%);
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__close {
+        position: absolute;
+        right: 18px;
+        top: 10px;
+        font-size: 60px;
+        color: #ffffff;
+        font-family: 'Courier New', 'Lato', sans-serif;
+        font-weight: 300;
+        cursor: pointer;
+    }
+    &__title {
+        margin: 13px 0 25px;
+        font-family: "Code-Pro", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    &__light {
+        font-weight: 400;
+        font-size: 20px;
+        font-family: 'Code-Pro-LC', sans-serif;
+    }
+    &__form {
+        padding-right: 80px;
+    }
+    &__input {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+        &-wrap {
+            margin: 0 0 25px;
+            position: relative;
+        }
+    }
+    &__button {
+        margin: 0 0 49px;
+        padding: 10px 0;
+        width: 100%;
+        &:hover {
+            box-shadow: 0 10px 15px rgba(39, 39, 39, 0.3);
+        }
+    }
+    &__img {
+        width: 313px;
+    }
+}
+
+label.modal__error {
+    position: absolute;
+    color: #ffffff;
+    left: 0;
+    bottom: -22px;
+}
+
+@media screen and (max-width: $md) {
+    .modal {
+        padding: 14px 20px 0;
+        width: 644px;
+        &__text {
+            align-self: center;
+        }
+        &__title {
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        &__light {
+            font-size: 16px;
+            line-height: 10px;
+        }
+        &__form {
+            padding-right: 130px;
+            input.modal__error {
+                margin-bottom: 30px;
+            }
+        }
+        &__input {
+            padding: 8px 0;
+            &-wrap {
+                margin-bottom: 8px;
+            }
+        }
+        &__button {
+            margin: 0;
+            padding: 6px 0;
+        }
+        &__img {
+            width: 280px;
+        }
+        &__close {
+            font-size: 40px;
+            line-height: 28px;
+            top: 7px;
+            right: 7px;
+        }
+    }
+    label.modal__error {
+        bottom: -29px;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .modal {
+        max-width: 100%;
+        padding: 20px 0 0;
+        &__wrap {
+            flex-direction: column;
+            padding: 0;
+            align-items: center;
+            text-align: center;
+        }
+        &__title {
+            margin-bottom: 10px;
+        }
+        &__form {
+            margin-bottom: 15px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input.modal__error {
+                margin-bottom: 20px;
+
+            }
+        }
+        &__button {
+            width: auto;
+            padding: 8px 43px;
+        }
+        &__img {
+            width: 240px
+        }
+    }
+    label.modal__error {
+        bottom: -8px;
+        text-align: left;
+    }
+}
