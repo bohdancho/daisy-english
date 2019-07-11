@@ -41,9 +41,9 @@ var config = {
   server: {
     baseDir: "./dist"
   },
-  // host: 'localhost',
+  host: 'localhost',
   port: 3000,
-  tunnel: 'asdfs',
+  // tunnel: 'asdfs',
   logPrefix: "Faugore"
 };
 
