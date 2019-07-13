@@ -18,21 +18,24 @@ const path = {
     js: 'dist/js/',
     css: 'dist/css/',
     img: 'dist/img/',
-    fonts: 'dist/fonts/'
+    fonts: 'dist/fonts/',
+    php: 'dist/php/'
   },
   src: { 
     html: 'src/*.html', 
     js: 'src/js/script.js',
     style: 'src/style/style.scss',
     img: 'src/img/**/*.*', 
-    fonts: 'src/fonts/**/*.*'
+    fonts: 'src/fonts/**/*.*',
+    php: 'src/php/**/*.*'
   },
   watch: {
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
     style: 'src/style/**/*.scss',
     img: 'src/img/**/*.*',
-    fonts: 'src/fonts/**/*.*'
+    fonts: 'src/fonts/**/*.*',
+    php: 'src/php/**/*.*'
   },
   clean: './dist'
 };
@@ -97,11 +100,18 @@ gulp.task('fonts:dist', function(done) {
   done();
 });
 
+gulp.task('php:dist', function(done) {
+  gulp.src(path.src.php)
+    .pipe(gulp.dest(path.dist.php))
+  done();
+});
+
 gulp.task('dist', gulp.series('html:dist', 
 															'js:dist',
 														  'style:dist', 
 														  'image:dist',
-														  'fonts:dist'));
+                              'fonts:dist',
+                              'php:dist'));
 
 gulp.task('clean', function (cb) {
   rimraf(path.clean, cb);
@@ -117,6 +127,8 @@ gulp.task('watch', function(){
   watch([path.watch.img], gulp.parallel('image:dist'));
 
   watch([path.watch.fonts], gulp.parallel('fonts:dist'));
+  
+  watch([path.watch.php], gulp.parallel('php:dist'));
 });
 
 gulp.task('webserver', function () {

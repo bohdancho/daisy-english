@@ -62,13 +62,6 @@
     }
 }
 
-label.modal__error {
-    position: absolute;
-    color: #ffffff;
-    left: 0;
-    bottom: -22px;
-}
-
 @media screen and (max-width: $md) {
     .modal {
         padding: 14px 20px 0;
@@ -86,9 +79,6 @@ label.modal__error {
         }
         &__form {
             padding-right: 130px;
-            input.modal__error {
-                margin-bottom: 30px;
-            }
         }
         &__input {
             padding: 8px 0;
@@ -109,9 +99,6 @@ label.modal__error {
             top: 7px;
             right: 7px;
         }
-    }
-    label.modal__error {
-        bottom: -29px;
     }
 }
 
@@ -134,10 +121,6 @@ label.modal__error {
             display: flex;
             flex-direction: column;
             align-items: center;
-            input.modal__error {
-                margin-bottom: 20px;
-
-            }
         }
         &__button {
             width: auto;
@@ -146,9 +129,5 @@ label.modal__error {
         &__img {
             width: 240px
         }
-    }
-    label.modal__error {
-        bottom: -8px;
-        text-align: left;
     }
 }

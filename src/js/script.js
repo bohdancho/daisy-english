@@ -2,7 +2,6 @@
 //= component/slick.js
 //= component/smooth-scroll.js
 //= component/maskedinput.js
-//= component/validate.js
 
 /* 
     Tabs
@@ -89,60 +88,6 @@ $('.js-register__input_tel').mask("+7 (999) 999-99-99", {
 });
 
 /*
-    Validation
-*/
-$('.js-register__form').validate({
-    rules: {
-        name: {
-            required: true,
-            minlength: 2
-        },
-        tel: {
-            phone: true
-        }
-    },
-    messages: {
-        name: 'Введите, пожалуйста, Ваше имя',
-        tel: 'Введите, пожалуйста, Ваш номер телефона'
-    },
-    errorClass: 'register__error'
-});
-
-$('.js-modal__form').validate({
-    focusInvalid: false,
-    rules: {
-        name: {
-            required: true,
-            minlength: 2
-        },
-        tel: {
-            phone: true
-        }
-    },
-    messages: {
-        name: 'Введите, пожалуйста, Ваше имя',
-        tel: 'Введите, пожалуйста, Ваш номер телефона'
-    },
-    errorClass: 'modal__error'
-});
-
-jQuery.validator.addMethod('phone', function(value, element) {
-    var str = value;
-    var tempStr = [];
-    for (var i = 0; i < str.length; i++) {
-        if ( isNumeric(str[i]) ) {
-            tempStr.push(str[i]);
-        }
-    }
-    tempStr = tempStr.join('').toString();
-    return tempStr.length == 11;
-
-    function isNumeric(n) { 
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    }
-}, 'Введите, пожалуйста, Ваш номер телефона');  
-
-/*
     Hamburger Menu
 */
 
@@ -154,3 +99,36 @@ $('.js-nav .nav__item').on('click', function() {
     $('.js-nav').toggleClass('nav_active');
     $(' .js-nav-button').toggleClass('nav-button_active');
 })
+
+/*
+    Forms sending
+*/
+
+$(".modal__form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "../php/mail.php", //Change
+        data: th.serialize()
+    }).done(function() {
+        setTimeout(function() {
+            closeModal();
+            th.trigger("reset");
+        }, 1000);
+    });
+    return false;
+});
+
+$(".register__form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "../php/mail.php", //Change
+        data: th.serialize()
+    }).done(function() {
+        setTimeout(function() {
+            th.trigger("reset");
+        }, 1000);
+    });
+    return false;
+});

@@ -106,7 +106,7 @@
 					<p class="advantages__text">
 						Устанавливаем адекватную цену
 						за качественную работу.
-						Предлагаем оплату от 2 уроков
+						Предлагаем оплату от 2-ух месяцев
 					</p>
 				</div>
 			</div>
@@ -464,15 +464,18 @@
 				<p class="register__text">
 					Познакомьтесь со своим будущим преподавателеми узнайте свой уровень 
 					английского на пробном уроке, а так же узнайте 
-					как <br> <span class="register__bold">получить скидку в 30%</span>
+					как <br> <span class="register__bold">получить скидку в 10%</span>
 				</p>
-				<form class="register__form js-register__form" action="#" method="POST">
+				<form class="register__form js-register__form form">
+					<!-- <input type="hidden" name="project_name" value="Daisy English"> -->
+					<!-- <input type="hidden" name="admin_email" value="bogdan-kld@bk.ru"> -->
+					<!-- <input type="hidden" name="form_subject" value="Заявка с сайта Daisy English"> -->
 					<div class="register__inputs">
 						<div class="register__wrap">
-							<input type="text" placeholder="Имя" name="name" class="register__input">
+							<input type="text" placeholder="Имя" name="Name" class="register__input" required>
 						</div>
 						<div class="register__wrap">
-							<input type="tel" placeholder="Телефон" name="tel" class="register__input js-register__input_tel">
+							<input type="tel" placeholder="Телефон" name="Phone" class="register__input js-register__input_tel" required>
 						</div>
 					</div>
 					<input type="submit" value="Записаться" class="register__button">
@@ -498,12 +501,15 @@
 					Заполните форму заявки <br>
 					<span class="modal__light">и получите вводный урок бесплатно</span>
 				</div>
-				<form class="modal__form js-modal__form" action="#">
+				<form class="modal__form js-modal__form form">
+					<!-- <input type="hidden" name="project_name" value="Daisy English"> -->
+					<!-- <input type="hidden" name="admin_email" value="bogdan-kld@bk.ru"> -->
+					<!-- <input type="hidden" name="form_subject" value="Заявка с сайта Daisy English"> -->
 					<div class="modal__input-wrap">
-						<input class="register__input modal__input" type="text" name="name" placeholder="Имя">
+						<input class="register__input modal__input" type="text" name="Name" placeholder="Имя" required>
 					</div>
 					<div class="modal__input-wrap">
-						<input class="register__input modal__input js-modal__input_tel" type="tel" name="tel" placeholder="Телефон">
+						<input class="register__input modal__input js-modal__input_tel" type="tel" name="Phone" placeholder="Телефон" required>
 					</div>
 					<input class="register__button modal__button" type="submit" value="Отправить">
 				</form>
